@@ -259,17 +259,20 @@
     border-bottom: 1px solid transparent;
   }
   .nav.is-scrolled { background: rgba(22, 18, 31, 0.9); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); padding: 12px 0; border-color: var(--ink-line); }
+  .nav .wrap { max-width: 1320px; }
   .nav__row { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
-  .wordmark { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--paper); }
+  .wordmark { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--paper); flex: none; white-space: nowrap; }
   .wordmark svg { width: 24px; height: 24px; flex: none; }
   .wordmark span { font-family: var(--font-display); font-weight: 700; font-size: 17px; letter-spacing: 0.02em; }
-  .nav__links { display: flex; align-items: center; gap: 30px; }
+  .nav__links { display: flex; align-items: center; gap: 20px; flex: none; }
   .nav__links a {
-    font-family: var(--font-mono); font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase;
+    display: inline-flex; align-items: center; gap: 5px; white-space: nowrap;
+    font-family: var(--font-mono); font-size: 12.5px; letter-spacing: 0.09em; text-transform: uppercase;
     color: var(--paper-muted); text-decoration: none; transition: color 160ms ease;
   }
   .nav__links a:hover { color: var(--gold-bright); }
-  .nav .btn { padding: 10px 20px; font-size: 13.5px; }
+  .nav__links a svg { width: 10px; height: 10px; opacity: 0.7; }
+  .nav .btn { padding: 10px 20px; font-size: 13.5px; flex: none; white-space: nowrap; }
 
   /* ============ HERO ============ */
   .hero { position: relative; padding: 0; min-height: calc(100vh + 170px); display: flex; flex-direction: column; justify-content: flex-end; }
@@ -540,6 +543,29 @@
   }
   .friends__cta { margin-top: 40px; }
 
+  /* ============ ABOUT ============ */
+  .about { background: var(--parch); color: var(--parch-ink); }
+  .about__grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 60px; align-items: start; }
+  .about__links { display: flex; flex-direction: column; gap: 16px; }
+  .about__link {
+    display: flex; align-items: center; gap: 16px;
+    background: #fffaf0; border: 1px solid var(--parch-line);
+    padding: 20px 22px; text-decoration: none; color: inherit;
+    box-shadow: 0 14px 30px -22px rgba(44,32,19,0.4);
+    transition: transform 160ms ease, box-shadow 160ms ease;
+  }
+  .about__link:hover { transform: translateY(-3px); box-shadow: 0 18px 34px -18px rgba(44,32,19,0.5); }
+  .about__link-icon {
+    width: 44px; height: 44px; border-radius: 50%; flex: none;
+    background: var(--parch-deep); border: 1.5px solid var(--ember);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .about__link-icon svg { width: 20px; height: 20px; }
+  .about__link-title { font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; }
+  .about__link-sub { font-size: 0.85rem; color: var(--parch-muted); margin-top: 4px; line-height: 1.5; }
+  .about__link-arrow { margin-left: auto; color: var(--ember); flex: none; }
+  .about__link-arrow svg { width: 16px; height: 16px; }
+
   /* ============ CLOSING ============ */
   .closing { position: relative; padding: 148px 0 0; text-align: center; overflow: clip; }
   .closing__bg { position: absolute; inset: 0; z-index: 0; }
@@ -570,7 +596,7 @@
 
   /* ============ RESPONSIVE ============ */
   @media (max-width: 900px) {
-    .why__grid, .legend__grid { grid-template-columns: 1fr; gap: 40px; }
+    .why__grid, .legend__grid, .about__grid { grid-template-columns: 1fr; gap: 40px; }
     .proof__grid { grid-template-columns: repeat(2, 1fr); }
     .testimonial-grid { grid-template-columns: 1fr; gap: 40px; }
     .academy__row { grid-template-columns: 1fr; }
@@ -610,11 +636,14 @@
       <span>PRIVACY VILLAGE</span>
     </a>
     <div class="nav__links">
+      <a href="#about">About</a>
       <a href="#gallery">The Village</a>
       <a href="#legend">The Legend</a>
       <a href="#academy">The Academy</a>
       <a href="#quests">Quest Board</a>
       <a href="#festival">The Festival</a>
+      <a href="https://blog.privacyquest.org/" target="_blank" rel="noopener">What's New<svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a href="https://www.youtube.com/@PrivacyQuest" target="_blank" rel="noopener">Events<svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     </div>
     <a class="btn btn--ghost-ink" href="https://play.privacyvillage.org/">Enter the Village</a>
   </div>
@@ -1044,6 +1073,38 @@
       <div class="friends__logo">Community</div>
     </div>
     <a class="btn btn--gold friends__cta reveal" href="#">Become a Friend of the Village</a>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="section about" id="about">
+  <div class="wrap about__grid">
+    <div class="reveal">
+      <p class="eyebrow eyebrow--ember">About</p>
+      <h2>About Privacy Village</h2>
+      <div class="prose" style="margin-top:22px;">
+        <p>Privacy Village is built by Imagine Privacy — the studio behind PrivacyQuest, a growing set of gamified tools for teaching privacy, AI safety, and compliance. What began as a Unity-built compliance simulator has grown into this persistent village, its Academy, and its yearly festival.</p>
+        <p>The project is led by Mert Can Boyar — a privacy lawyer by trade, a privacy engineer by heart, and someone who'd rather teach through play than PowerPoint.</p>
+      </div>
+    </div>
+    <div class="about__links reveal">
+      <a class="about__link" href="https://blog.privacyquest.org/" target="_blank" rel="noopener">
+        <div class="about__link-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M4 20l4.5-1.2L19 8.3a2 2 0 0 0 0-2.8l-.5-.5a2 2 0 0 0-2.8 0L5.2 15.5 4 20Z" stroke="#b1492c" stroke-width="1.4" stroke-linejoin="round"/><path d="M14.5 6.5l3 3" stroke="#b1492c" stroke-width="1.4"/></svg></div>
+        <div>
+          <div class="about__link-title">What's New</div>
+          <div class="about__link-sub">Devlogs, festival recaps, and behind-the-scenes posts on the PrivacyQuest blog.</div>
+        </div>
+        <div class="about__link-arrow"><svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      </a>
+      <a class="about__link" href="https://www.youtube.com/@PrivacyQuest" target="_blank" rel="noopener">
+        <div class="about__link-icon"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#b1492c" stroke-width="1.4"/><path d="M10 8.5l6 3.5-6 3.5v-7Z" fill="#b1492c"/></svg></div>
+        <div>
+          <div class="about__link-title">Events</div>
+          <div class="about__link-sub">Recordings, highlights, and event coverage on the PrivacyQuest YouTube channel.</div>
+        </div>
+        <div class="about__link-arrow"><svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      </a>
+    </div>
   </div>
 </section>
 
