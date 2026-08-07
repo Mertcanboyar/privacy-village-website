@@ -439,7 +439,8 @@
 
   /* ============ TESTIMONIALS ============ */
   .testimonials { background: var(--ink); border-bottom: 1px solid var(--ink-line); }
-  .testimonial-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 52px; margin-top: 44px; }
+  .testimonial-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 52px 60px; margin-top: 44px; }
+  .testimonial-grid .testimonial:nth-child(5) { grid-column: 1 / -1; max-width: 640px; margin: 0 auto; }
   .testimonial { text-align: center; }
   .testimonial__stars { color: var(--gold-bright); font-size: 1.05rem; letter-spacing: 5px; }
   .testimonial__quote { font-family: var(--font-body); font-weight: 700; font-size: 1.06rem; line-height: 1.65; color: var(--paper); margin-top: 16px; }
@@ -691,6 +692,21 @@
         <div class="testimonial__stars">★★★★★</div>
         <p class="testimonial__quote">&ldquo;A fantastic way to raise awareness, celebrate Data Privacy Day, and enjoy some fun-filled networking all at once!&rdquo;</p>
         <p class="testimonial__by">Kim Wuyts<span>Manager Cyber &amp; Privacy @ PwC Belgium</span></p>
+      </div>
+      <div class="testimonial reveal">
+        <div class="testimonial__stars">★★★★★</div>
+        <p class="testimonial__quote">&ldquo;It is a great concept that presents education, which is at the forefront of the measures to be taken within the scope of ensuring data security, in a memorable and entertaining way. A very successful example of learning while having fun.&rdquo;</p>
+        <p class="testimonial__by">Demet Keklikkıran<span>Data Protection Officer @ Denizbank</span></p>
+      </div>
+      <div class="testimonial reveal">
+        <div class="testimonial__stars">★★★★★</div>
+        <p class="testimonial__quote">&ldquo;Privacy Village isn't just an event; it's an active, collaborative ecosystem. Between the daily challenges, lively discussions, and collaborative problem-solving, I connected with practitioners from around the world who are tackling the exact same AI and data protection puzzles we are.&rdquo;</p>
+        <p class="testimonial__by">Prof. Dr. Leyla Keser<span>Chairwoman @ Tethys</span></p>
+      </div>
+      <div class="testimonial reveal">
+        <div class="testimonial__stars">★★★★★</div>
+        <p class="testimonial__quote">&ldquo;Privacy Village finally turned data protection and AI governance into something you actually want to play. Hands-down the most engaging community event of the year.&rdquo;</p>
+        <p class="testimonial__by">Debra Farber<span>Shifting Privacy Left Media</span></p>
       </div>
     </div>
   </div>
