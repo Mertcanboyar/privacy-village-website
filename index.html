@@ -417,11 +417,11 @@
     color: var(--parch-ink);
   }
   .legend__grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 70px; align-items: start; }
-  .legend__gallery { margin-top: 76px; }
+  .legend__gallery { margin-top: 96px; width: 100%; }
   .legend__gallery-title { font-size: clamp(1.5rem, 1.2rem + 1vw, 2rem); margin-top: 14px; }
-  .legend-gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 40px; }
+  .legend-gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 26px; margin-top: 44px; padding: 0 56px; }
   .legend-gallery-grid .frame { margin-top: 0; }
-  .legend-gallery-grid .frame__media { aspect-ratio: 16 / 9; }
+  .legend-gallery-grid .frame__media { aspect-ratio: 4 / 3; }
   .legend__lead .dropcap {
     float: left;
     font-family: var(--font-display); font-weight: 700;
@@ -675,7 +675,7 @@
     .quest-grid { grid-template-columns: repeat(2, 1fr); }
     .steps-row { grid-template-columns: repeat(2, 1fr); }
     .gallery-grid { grid-template-columns: repeat(2, 1fr); }
-    .legend-gallery-grid { grid-template-columns: repeat(2, 1fr); }
+    .legend-gallery-grid { grid-template-columns: repeat(2, 1fr); padding: 0 28px; }
     .avatar-grid { grid-template-columns: repeat(2, 1fr); }
     .teens__learn-list { grid-template-columns: 1fr; }
     .teens__safety-grid { grid-template-columns: 1fr; }
@@ -714,7 +714,7 @@
     .steps-row { grid-template-columns: 1fr; gap: 30px; }
     .proof__grid { grid-template-columns: 1fr; }
     .gallery-grid { grid-template-columns: 1fr; }
-    .legend-gallery-grid { grid-template-columns: 1fr; }
+    .legend-gallery-grid { grid-template-columns: 1fr; padding: 0 20px; gap: 18px; }
     .avatar-grid { grid-template-columns: repeat(2, 1fr); }
     .press-strip { padding: 24px 0; }
     .press-strip__row { gap: 10px; }
@@ -954,12 +954,15 @@
       <hr class="founder__rule" />
       <p>I'm a privacy lawyer by trade and a privacy engineer by heart. I've spent years teaching this field through games, music, and stories — from directing a university privacy innovation lab to writing guides for privacy engineers — because the people protecting our data deserve better than boring training. Privacy Village is that belief, built into a world. Come help me expand the map.</p>
     </div>
+  </div>
 
-  <div class="wrap legend__gallery">
+  <div class="legend__gallery">
+    <div class="wrap">
     <div class="section__head section__head--center reveal">
       <p class="eyebrow eyebrow--ember">From the archives</p>
       <h3 class="legend__gallery-title">Moments from festivals past</h3>
       <p class="lede" style="margin-top:14px;color:var(--parch-muted);">A few faces and nights from the Village's earlier gatherings.</p>
+    </div>
     </div>
     <div class="legend-gallery-grid">
       <div class="frame reveal">
@@ -1008,7 +1011,6 @@
         <div class="frame__caption"><div class="cap-title">Michala Liavaag &amp; Ana Garner</div><div class="cap-sub">Gamification, But Not As You Know It</div></div>
       </div>
     </div>
-  </div>
   </div>
 </section>
 
