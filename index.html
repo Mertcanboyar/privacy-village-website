@@ -360,12 +360,12 @@
   @keyframes bob { 0%, 100% { transform: translateY(0); opacity: 0.5; } 50% { transform: translateY(6px); opacity: 1; } }
 
   /* ============ PRESS STRIP ============ */
-  .press-strip { position: relative; z-index: 2; background: var(--ink-soft); border-bottom: 1px solid var(--ink-line); padding: 18px 0; }
-  .press-strip__row { display: flex; align-items: center; justify-content: center; gap: 12px; flex-wrap: wrap; text-align: center; }
-  .press-strip__row, .press-strip__row span { font-family: var(--font-mono); font-size: 11.5px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--paper-muted); }
-  .press-strip__forbes { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; color: var(--paper-muted); opacity: 0.7; transition: opacity 160ms ease; }
+  .press-strip { position: relative; z-index: 2; background: var(--ink-soft); border-bottom: 1px solid var(--ink-line); padding: 36px 0; }
+  .press-strip__row { display: flex; align-items: center; justify-content: center; gap: 24px; flex-wrap: wrap; text-align: center; }
+  .press-strip__row, .press-strip__row span { font-family: var(--font-mono); font-size: 23px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--paper-muted); }
+  .press-strip__forbes { display: inline-flex; align-items: center; gap: 16px; text-decoration: none; color: var(--paper-muted); opacity: 0.7; transition: opacity 160ms ease; }
   .press-strip__forbes:hover { opacity: 1; }
-  .press-strip__logo { height: auto; width: 82px; max-width: 100px; display: block; }
+  .press-strip__logo { height: auto; width: 164px; max-width: 200px; display: block; }
   .press-strip__dot { opacity: 0.5; }
 
   /* ============ GALLERY (Explore the Village) ============ */
@@ -687,6 +687,12 @@
     .proof__grid { grid-template-columns: 1fr; }
     .gallery-grid { grid-template-columns: 1fr; }
     .avatar-grid { grid-template-columns: repeat(2, 1fr); }
+    .press-strip { padding: 24px 0; }
+    .press-strip__row { gap: 10px; }
+    .press-strip__row, .press-strip__row span { font-size: 14px; }
+    .press-strip__forbes { gap: 10px; }
+    .press-strip__logo { width: 100px; }
+    .press-strip__dot { display: none; }
   }
 </style>
 </head>
