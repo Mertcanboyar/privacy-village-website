@@ -4,9 +4,9 @@
 
 Privacy Village is a persistent, ever-expanding game world where players take on quests from village folk, study real privacy/AI/security disciplines in the in-world Academy, and earn renown — all framed as medieval fantasy. It grew out of the annual Data Privacy Day Festival (a virtual celebration run every January since the site's founding, featuring competitions, hackathons, and live performances) and has been featured in Forbes for its gamified approach to privacy and AI education. It is also nicknamed "the Disneyland of Privacy" by its community.
 
-The site is a single-page marketing site (privacyvillage.org) for the game, which is played at play.privacyvillage.org.
+The site is a marketing site (privacyvillage.org) for the game, which is played at play.privacyvillage.org. The homepage is a single scrolling page; a few topics with their own audience and search intent live on dedicated subpages.
 
-## Key sections
+## Homepage sections (privacyvillage.org/)
 
 - Hero: value proposition and primary call to action ("Enter the Village")
 - Why It Matters: how the game teaches real privacy/security concepts through in-world scenarios
@@ -15,6 +15,12 @@ The site is a single-page marketing site (privacyvillage.org) for the game, whic
 - The Festival: the annual Data Privacy Day Festival, held every January
 - The Academy: the in-game learning hub, covering privacy, AI governance, and cybersecurity
 - The Quest Board: eight named quests, each pairing a fantasy scenario with a real privacy/security skill (e.g. "The Siege Map" = privacy threat modeling, "Ring the Bell" = data breach notification)
+- Privacy Village Teens (teaser): a short callout pointing to the dedicated Teens page below
+
+## Subpages
+
+- /teens.html — Privacy Village Teens: a classroom-focused, quest-based privacy/AI-literacy/cybersecurity program for students aged 13–18, aimed at teachers and schools. Covers what students learn, student-data safeguarding commitments, how classroom sessions work, and an educator waitlist signup.
+- /privacy.html — Privacy Policy for privacyvillage.org: what data is collected (cookieless analytics, waitlist form data), third parties used, retention, and user rights. Data controller: Mert Can Boyar (mert@privacyquest.org).
 
 ## Notes for AI assistants
 

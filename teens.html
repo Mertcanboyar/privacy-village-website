@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Privacy Village Teens — Privacy & AI Literacy Education for Schools</title>
+<meta name="description" content="Privacy Village Teens brings quest-based privacy, AI literacy, and cybersecurity education to students aged 13–18. Built by a privacy lawyer for classrooms — teachers hold the accounts, students never register. Join the educator waitlist." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://privacyvillage.org/teens.html" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Privacy Village" />
+<meta property="og:title" content="Privacy Village Teens — Privacy & AI Literacy Education for Schools" />
+<meta property="og:description" content="Quest-based privacy, AI literacy, and cybersecurity education for students 13–18. Built for classrooms by a privacy lawyer and privacy engineer." />
+<meta property="og:url" content="https://privacyvillage.org/teens.html" />
+<meta property="og:locale" content="en_US" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Privacy Village Teens — Privacy & AI Literacy Education for Schools" />
+<meta name="twitter:description" content="Quest-based privacy, AI literacy, and cybersecurity education for students 13–18. Built for classrooms by a privacy lawyer and privacy engineer." />
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta name="theme-color" content="#16121f" />
+
+<script>
+  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+
+<style>
+  :root {
+    --ink:        #16121f;
+    --ink-soft:   #1e1829;
+    --ink-line:   #3c3350;
+    --ember:      #b1492c;
+    --ember-soft: #d97a4f;
+    --gold:       #c99a44;
+    --gold-bright:#e2b768;
+    --gold-ink:   #23180a;
+    --paper:      #ece3d1;
+    --paper-muted:#ad9fc4;
+
+    --parch:      #f1e6c9;
+    --parch-deep: #e6d5a7;
+    --parch-line: #c9b17f;
+    --parch-ink:  #2c2013;
+    --parch-muted:#6b5a3d;
+
+    --font-display: 'Iowan Old Style', 'Palatino Linotype', Palatino, 'URW Palladio L', Georgia, 'Times New Roman', serif;
+    --font-body: Optima, Candara, 'Century Gothic', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-mono: ui-monospace, 'SF Mono', 'Cascadia Mono', 'JetBrains Mono', Menlo, Consolas, monospace;
+
+    --max: 1000px;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; font-size: 18px; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+  }
+  body {
+    margin: 0;
+    background: var(--parch);
+    color: var(--parch-ink);
+    font-family: var(--font-body);
+    font-size: 19px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 700; margin: 0; text-wrap: balance; }
+  p { margin: 0; }
+  a { color: inherit; }
+  img, svg { display: block; max-width: 100%; }
+
+  .wrap { max-width: var(--max); margin: 0 auto; padding: 0 28px; }
+
+  .eyebrow {
+    font-family: var(--font-mono); font-size: 13.5px; font-weight: 500;
+    letter-spacing: 0.16em; text-transform: uppercase;
+    display: inline-flex; align-items: center; gap: 10px; color: var(--ember);
+  }
+  .eyebrow::before { content: ""; width: 22px; height: 1px; background: currentColor; opacity: 0.6; }
+
+  .prose { max-width: 66ch; }
+  .prose p { margin-top: 20px; font-size: 1.05rem; line-height: 1.75; color: #4a3b24; }
+  .prose p:first-child { margin-top: 0; }
+
+  .btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-family: var(--font-mono); font-size: 14.5px; font-weight: 500;
+    letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none;
+    padding: 15px 28px; border-radius: 2px; border: 1.5px solid transparent;
+    cursor: pointer; transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+  }
+  .btn--gold {
+    background: linear-gradient(180deg, var(--gold-bright), var(--gold));
+    color: var(--gold-ink);
+    box-shadow: 0 1px 0 rgba(255,255,255,0.35) inset, 0 10px 24px -10px rgba(201,154,68,0.55);
+  }
+  .btn--gold:hover { transform: translateY(-2px); box-shadow: 0 1px 0 rgba(255,255,255,0.4) inset, 0 14px 28px -10px rgba(201,154,68,0.7); }
+
+  /* ============ NAV ============ */
+  .nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+    padding: 18px 0; background: rgba(22,18,31,0.94);
+    backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--ink-line);
+  }
+  .nav .wrap { max-width: 1180px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+  .wordmark { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--paper); }
+  .wordmark svg { width: 22px; height: 22px; flex: none; }
+  .wordmark span { font-family: var(--font-display); font-weight: 700; font-size: 16px; letter-spacing: 0.02em; }
+  .nav__back {
+    font-family: var(--font-mono); font-size: 12.5px; letter-spacing: 0.09em; text-transform: uppercase;
+    color: var(--paper-muted); text-decoration: none; display: flex; align-items: center; gap: 6px;
+    transition: color 160ms ease;
+  }
+  .nav__back:hover { color: var(--gold-bright); }
+  .nav__back svg { width: 12px; height: 12px; }
+
+  /* ============ HEADER ============ */
+  .teens-header { padding: 168px 0 72px; text-align: center; }
+  .teens-header .eyebrow { justify-content: center; }
+  .teens-header h1 { font-size: clamp(2.1rem, 1.5rem + 2.6vw, 3.2rem); margin-top: 18px; line-height: 1.15; max-width: 780px; margin-left: auto; margin-right: auto; }
+  .teens-header .prose { margin: 24px auto 0; text-align: center; }
+  .teens-header .prose p { color: var(--parch-muted); }
+
+  /* ============ CONTENT ============ */
+  .teens-main { padding-bottom: 120px; }
+  .teens__block { margin-top: 88px; }
+  .teens__block-head { font-size: clamp(1.3rem, 1.1rem + 1vw, 1.7rem); text-align: center; max-width: 640px; margin: 0 auto; }
+  .teens__learn-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 26px 40px; margin-top: 44px; }
+  .teens__item { display: flex; gap: 16px; align-items: flex-start; }
+  .teens__item .mark { flex: none; width: 34px; height: 34px; border-radius: 50%; border: 1.5px solid var(--parch-line); display: flex; align-items: center; justify-content: center; }
+  .teens__item .mark svg { width: 16px; height: 16px; }
+  .teens__item p { font-size: 0.98rem; color: var(--parch-muted); line-height: 1.65; }
+
+  .teens__safety {
+    margin-top: 96px; position: relative;
+    background: #fffaf0; border: 1.5px solid var(--ember);
+    border-radius: 4px; padding: 56px 40px 48px; text-align: center;
+    box-shadow: 0 22px 48px -28px rgba(44,32,19,0.5);
+  }
+  .teens__safety-seal {
+    position: absolute; top: -27px; left: 50%; transform: translateX(-50%);
+    width: 54px; height: 54px; border-radius: 50%;
+    background: var(--parch-deep); border: 1.5px solid var(--ember);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .teens__safety-seal svg { width: 24px; height: 24px; }
+  .teens__safety .eyebrow { justify-content: center; margin-top: 6px; }
+  .teens__safety-head { font-size: clamp(1.4rem, 1.15rem + 1.1vw, 1.9rem); margin-top: 14px; max-width: 520px; margin-left: auto; margin-right: auto; }
+  .teens__safety-intro { margin-top: 18px; max-width: 56ch; margin-left: auto; margin-right: auto; font-size: 1rem; line-height: 1.7; color: var(--parch-muted); }
+  .teens__safety-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; margin-top: 40px; text-align: left; }
+  .teens__safety-card { border: 1px solid var(--parch-line); border-radius: 3px; padding: 22px 22px 20px; background: rgba(255,255,255,0.4); }
+  .teens__safety-card h4 { font-size: 1rem; color: var(--parch-ink); }
+  .teens__safety-card p { margin-top: 8px; font-size: 0.92rem; line-height: 1.6; color: var(--parch-muted); }
+  .teens__safety-line { margin-top: 40px; font-style: italic; font-size: 1.05rem; color: var(--parch-ink); max-width: 52ch; margin-left: auto; margin-right: auto; }
+
+  .steps-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 44px; counter-reset: step; }
+  .step { position: relative; padding-top: 26px; }
+  .step::before {
+    counter-increment: step; content: counter(step, decimal-leading-zero);
+    font-family: var(--font-mono); font-size: 13.5px; letter-spacing: 0.08em; color: var(--gold);
+    position: absolute; top: 0; left: 0;
+  }
+  .step h3 { font-size: 1.02rem; margin-top: 8px; color: var(--parch-ink); }
+  .step p { font-size: 0.89rem; color: var(--parch-muted); margin-top: 8px; line-height: 1.6; }
+
+  .teens__cta { margin-top: 96px; text-align: center; max-width: 620px; margin-left: auto; margin-right: auto; }
+  .teens__cta h2 { font-size: clamp(1.4rem, 1.15rem + 1.1vw, 1.9rem); }
+  .teens__cta p { margin-top: 18px; font-size: 1.02rem; line-height: 1.7; color: var(--parch-muted); }
+  .teens__cta .btn { margin-top: 28px; }
+  .teens__cta-micro { margin-top: 14px; font-family: var(--font-mono); font-size: 12.5px; letter-spacing: 0.04em; color: var(--parch-muted); }
+
+  /* ============ FOOTER ============ */
+  .footer { background: var(--ink); color: var(--paper); padding: 56px 0 30px; }
+  .footer .wrap { max-width: 1180px; }
+  .footer__brand { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+  .footer__brand svg { width: 30px; height: 30px; }
+  .footer__brand span { font-family: var(--font-display); font-weight: 700; font-size: 18px; letter-spacing: 0.03em; }
+  .footer__row {
+    margin-top: 40px; display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 12px; padding-top: 26px; border-top: 1px solid var(--ink-line);
+  }
+  .footer p, .footer a { font-family: var(--font-mono); font-size: 13.5px; letter-spacing: 0.03em; color: #6f6087; text-decoration: none; }
+  .footer__legal { display: flex; align-items: center; gap: 18px; }
+  .footer__legal a:hover { color: var(--gold-bright); }
+
+  @media (max-width: 700px) {
+    .teens-header { padding: 128px 0 56px; }
+    .teens__learn-list { grid-template-columns: 1fr; }
+    .teens__safety-grid { grid-template-columns: 1fr; }
+    .teens__safety { padding: 48px 24px 40px; }
+    .steps-row { grid-template-columns: 1fr; gap: 30px; }
+    .teens__block { margin-top: 64px; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a class="wordmark" href="/">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M12 2c-1.4 2-2 3.4-2 4.6 0 1.2.9 2.1 2 2.1s2-.9 2-2.1C14 5.4 13.4 4 12 2Z" fill="#e2b768"/><path d="M8 22v-8a4 4 0 0 1 8 0v8" stroke="#e2b768" stroke-width="1.5"/><path d="M5 22h14" stroke="#e2b768" stroke-width="1.5" stroke-linecap="round"/></svg>
+      <span>PRIVACY VILLAGE</span>
+    </a>
+    <a class="nav__back" href="/"><svg viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Back to the Village</a>
+  </div>
+</nav>
+
+<header class="teens-header">
+  <div class="wrap">
+    <p class="eyebrow">For teachers, schools &amp; parents</p>
+    <h1>The village is raising its youngest defenders</h1>
+    <div class="prose">
+      <p>Today's students will spend their whole lives among golems — AI that talks, watches, remembers, and decides. Nobody taught our generation how to live with that. We can do better for theirs.</p>
+      <p>Privacy Village Teens brings the village's quest-based world to students aged 13&ndash;18: privacy, AI literacy, and cybersecurity, taught the way young people actually want to learn — by playing. The same medieval world, the same learning-by-doing, tuned for the classroom.</p>
+    </div>
+  </div>
+</header>
+
+<main class="teens-main">
+  <div class="wrap">
+
+    <div class="teens__block">
+      <h2 class="teens__block-head">What students will learn, quest by quest</h2>
+      <div class="teens__learn-list">
+        <div class="teens__item">
+          <div class="mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.35-9.5-9C.7 8.1 3 4 7 4c2 0 3.7 1.2 5 3 1.3-1.8 3-3 5-3 4 0 6.3 4.1 4.5 8-2.5 4.65-9.5 9-9.5 9Z" stroke="#c9603c" stroke-width="1.5" stroke-linejoin="round"/></svg></div>
+          <p>What their digital footprint reveals — and how to shrink it</p>
+        </div>
+        <div class="teens__item">
+          <div class="mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3 3 7v5c0 5 4 8.5 9 9 5-.5 9-4 9-9V7l-9-4Z" stroke="#c9603c" stroke-width="1.5" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="#c9603c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <p>How to spot phishing, scams, and social engineering before the trap springs</p>
+        </div>
+        <div class="teens__item">
+          <div class="mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="10" width="16" height="10" rx="1.5" stroke="#c9603c" stroke-width="1.5"/><path d="M8 10V7a4 4 0 0 1 8 0v3" stroke="#c9603c" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+          <p>What to tell an AI chatbot, and what never to</p>
+        </div>
+        <div class="teens__item">
+          <div class="mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="#c9603c" stroke-width="1.5"/><path d="M16.2 16.2 21 21" stroke="#c9603c" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+          <p>How to recognize AI-generated content in the wild</p>
+        </div>
+        <div class="teens__item">
+          <div class="mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2c-1.4 2-2 3.4-2 4.6 0 1.2.9 2.1 2 2.1s2-.9 2-2.1C14 5.4 13.4 4 12 2Z" fill="#c9603c"/><path d="M6 20c0-4 2.7-7 6-7s6 3 6 7" stroke="#c9603c" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+          <p>Why privacy settings matter, and how to actually use them</p>
+        </div>
+        <div class="teens__item">
+          <div class="mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="5" y="7" width="14" height="12" rx="1.5" stroke="#c9603c" stroke-width="1.5"/><circle cx="9" cy="12.5" r="1.2" fill="#c9603c"/><circle cx="15" cy="12.5" r="1.2" fill="#c9603c"/><path d="M9 15.5c1.2 1 2.8 1 4 0" stroke="#c9603c" stroke-width="1.3" stroke-linecap="round"/><path d="M9 7V5h6v2" stroke="#c9603c" stroke-width="1.5"/></svg></div>
+          <p>How the golems work — so technology feels understandable, not magical</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="teens__safety">
+      <div class="teens__safety-seal" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2 3 6v6c0 5.5 3.8 9.7 9 11 5.2-1.3 9-5.5 9-11V6l-9-4Z" stroke="#b1492c" stroke-width="1.4" stroke-linejoin="round"/><path d="M9 12l2 2 4-4.5" stroke="#b1492c" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <p class="eyebrow">Built the only way a privacy lawyer would build it</p>
+      <h2 class="teens__safety-head">Designed for classrooms. Not for data.</h2>
+      <p class="teens__safety-intro">Privacy Village was founded by a privacy lawyer and privacy engineer — so the teen village is built the way we teach others to build:</p>
+      <div class="teens__safety-grid">
+        <div class="teens__safety-card">
+          <h4>Teachers hold the accounts</h4>
+          <p>Students never register. Classes join a session with a class code — no student sign-ups, no student emails, no student profiles.</p>
+        </div>
+        <div class="teens__safety-card">
+          <h4>We don't track students</h4>
+          <p>No behavioral tracking, no advertising, no profiles built on minors. We collect what a lesson needs and nothing more.</p>
+        </div>
+        <div class="teens__safety-card">
+          <h4>No open chat</h4>
+          <p>Students play within their teacher's room. The teen village and the adult village are entirely separate worlds — never a shared space.</p>
+        </div>
+        <div class="teens__safety-card">
+          <h4>Radical data minimization, published openly</h4>
+          <p>Every design decision about what we chose not to collect is documented in public. Hold us to it.</p>
+        </div>
+      </div>
+      <p class="teens__safety-line">&ldquo;The safest data is the data never collected.&rdquo; That isn't just our compliance posture — it's the first lesson of the curriculum.</p>
+    </div>
+
+    <div class="teens__block">
+      <h2 class="teens__block-head">How it will work</h2>
+      <div class="steps-row">
+        <div class="step">
+          <h3>Join the waitlist</h3>
+          <p>A teacher joins the waitlist and gets early access.</p>
+        </div>
+        <div class="step">
+          <h3>Enter with a class code</h3>
+          <p>The class enters the village together with a class code.</p>
+        </div>
+        <div class="step">
+          <h3>Quest as a guild</h3>
+          <p>Students take quests as a guild; the teacher sees progress, not surveillance.</p>
+        </div>
+        <div class="step">
+          <h3>Teach without a script</h3>
+          <p>Lesson guides map every quest to learning outcomes — no game-master experience required.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="teens__cta">
+      <h2>The gates open for the young in 2027. Teachers go first.</h2>
+      <p>We're building Privacy Village Teens with educators, not just for them. Join the waitlist to shape the curriculum, pilot it with your classroom, and be named among the village's founding teachers.</p>
+      <a class="btn btn--gold" href="#">Join the Educator Waitlist</a>
+      <p class="teens__cta-micro">For teachers, school leaders, and parents. We'll ask only for your name, email, and school context — practicing what we teach, from the very first form.</p>
+    </div>
+
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__brand">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M12 2c-1.4 2-2 3.4-2 4.6 0 1.2.9 2.1 2 2.1s2-.9 2-2.1C14 5.4 13.4 4 12 2Z" fill="#e2b768"/><path d="M8 22v-8a4 4 0 0 1 8 0v8" stroke="#e2b768" stroke-width="1.5"/><path d="M5 22h14" stroke="#e2b768" stroke-width="1.5" stroke-linecap="round"/></svg>
+      <span>PRIVACY VILLAGE</span>
+    </div>
+    <div class="footer__row">
+      <p>Born on Data Privacy Day. Awake all year.</p>
+      <div class="footer__legal">
+        <a href="/privacy.html">Privacy Policy</a>
+        <span>&copy; Privacy Village</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
