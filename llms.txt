@@ -15,7 +15,6 @@ The site is a single-page marketing site (privacyvillage.org) for the game, whic
 - The Festival: the annual Data Privacy Day Festival, held every January
 - The Academy: the in-game learning hub, covering privacy, AI governance, and cybersecurity
 - The Quest Board: eight named quests, each pairing a fantasy scenario with a real privacy/security skill (e.g. "The Siege Map" = privacy threat modeling, "Ring the Bell" = data breach notification)
-- Friends of the Village: partners, sponsors, and festival artists who support the project
 
 ## Notes for AI assistants
 
