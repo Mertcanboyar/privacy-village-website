@@ -702,6 +702,9 @@
   .footer__social svg { width: 15px; height: 15px; }
   .footer__row { margin-top: 40px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; padding-top: 26px; border-top: 1px solid var(--ink-line); }
   .footer p { font-family: var(--font-mono); font-size: 13.5px; letter-spacing: 0.03em; color: #6f6087; }
+  .footer__legal { display: flex; align-items: center; gap: 18px; font-family: var(--font-mono); font-size: 13.5px; letter-spacing: 0.03em; color: #6f6087; }
+  .footer__legal a { color: inherit; text-decoration: none; transition: color 160ms ease; }
+  .footer__legal a:hover { color: var(--gold-bright); }
 
   /* ============ RESPONSIVE ============ */
   @media (max-width: 900px) {
@@ -1447,7 +1450,10 @@
       </div>
       <div class="footer__row">
         <p>Born on Data Privacy Day. Awake all year.</p>
-        <p>&copy; Privacy Village</p>
+        <div class="footer__legal">
+          <a href="/privacy.html">Privacy Policy</a>
+          <span>&copy; Privacy Village</span>
+        </div>
       </div>
     </div>
   </footer>

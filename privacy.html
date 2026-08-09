@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Privacy Policy — Privacy Village</title>
+<meta name="description" content="What Privacy Village knows about you, why, and for how long — the privacy policy for privacyvillage.org, written in plain language." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://privacyvillage.org/privacy.html" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Privacy Village" />
+<meta property="og:title" content="Privacy Policy — Privacy Village" />
+<meta property="og:description" content="What the village keeps in its ledger — and what it never does. The privacy policy for privacyvillage.org." />
+<meta property="og:url" content="https://privacyvillage.org/privacy.html" />
+<meta property="og:locale" content="en_US" />
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta name="theme-color" content="#16121f" />
+
+<script>
+  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+
+<style>
+  :root {
+    --ink:        #16121f;
+    --ink-soft:   #1e1829;
+    --ink-line:   #3c3350;
+    --ember:      #b1492c;
+    --ember-soft: #d97a4f;
+    --gold:       #c99a44;
+    --gold-bright:#e2b768;
+    --gold-ink:   #23180a;
+    --paper:      #ece3d1;
+    --paper-muted:#ad9fc4;
+
+    --parch:      #f1e6c9;
+    --parch-deep: #e6d5a7;
+    --parch-line: #c9b17f;
+    --parch-ink:  #2c2013;
+    --parch-muted:#6b5a3d;
+
+    --font-display: 'Iowan Old Style', 'Palatino Linotype', Palatino, 'URW Palladio L', Georgia, 'Times New Roman', serif;
+    --font-body: Optima, Candara, 'Century Gothic', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-mono: ui-monospace, 'SF Mono', 'Cascadia Mono', 'JetBrains Mono', Menlo, Consolas, monospace;
+
+    --max: 880px;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; font-size: 18px; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+  }
+  body {
+    margin: 0;
+    background: var(--parch);
+    color: var(--parch-ink);
+    font-family: var(--font-body);
+    font-size: 19px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3 { font-family: var(--font-display); font-weight: 700; margin: 0; text-wrap: balance; }
+  p { margin: 0; }
+  a { color: inherit; }
+  img, svg { display: block; max-width: 100%; }
+
+  .wrap { max-width: var(--max); margin: 0 auto; padding: 0 28px; }
+
+  .eyebrow {
+    font-family: var(--font-mono); font-size: 13.5px; font-weight: 500;
+    letter-spacing: 0.16em; text-transform: uppercase;
+    display: inline-flex; align-items: center; gap: 10px; color: var(--ember);
+  }
+  .eyebrow::before { content: ""; width: 22px; height: 1px; background: currentColor; opacity: 0.6; }
+
+  .btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-family: var(--font-mono); font-size: 14px; font-weight: 500;
+    letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none;
+    padding: 13px 24px; border-radius: 2px; border: 1.5px solid transparent;
+    cursor: pointer; transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease, color 160ms ease;
+  }
+  .btn--gold {
+    background: linear-gradient(180deg, var(--gold-bright), var(--gold));
+    color: var(--gold-ink);
+    box-shadow: 0 1px 0 rgba(255,255,255,0.35) inset, 0 10px 24px -10px rgba(201,154,68,0.55);
+  }
+  .btn--gold:hover { transform: translateY(-2px); }
+  .btn--ghost-parch { border-color: var(--parch-line); color: var(--parch-ink); background: rgba(0,0,0,0.02); }
+  .btn--ghost-parch:hover { border-color: var(--ember); color: var(--ember); }
+
+  /* ============ NAV ============ */
+  .nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+    padding: 18px 0; background: rgba(22,18,31,0.94);
+    backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--ink-line);
+  }
+  .nav .wrap { max-width: 1180px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+  .wordmark { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--paper); }
+  .wordmark svg { width: 22px; height: 22px; flex: none; }
+  .wordmark span { font-family: var(--font-display); font-weight: 700; font-size: 16px; letter-spacing: 0.02em; }
+  .nav__back {
+    font-family: var(--font-mono); font-size: 12.5px; letter-spacing: 0.09em; text-transform: uppercase;
+    color: var(--paper-muted); text-decoration: none; display: flex; align-items: center; gap: 6px;
+    transition: color 160ms ease;
+  }
+  .nav__back:hover { color: var(--gold-bright); }
+  .nav__back svg { width: 12px; height: 12px; }
+
+  /* ============ HEADER ============ */
+  .policy-header { padding: 168px 0 64px; border-bottom: 1px solid var(--parch-line); }
+  .policy-header h1 { font-size: clamp(2rem, 1.5rem + 2.2vw, 2.9rem); margin-top: 16px; line-height: 1.15; }
+  .policy-header .sub { margin-top: 16px; font-size: 1.08rem; color: var(--parch-muted); max-width: 56ch; }
+  .policy-meta {
+    margin-top: 28px; display: flex; flex-wrap: wrap; gap: 10px 28px;
+    font-family: var(--font-mono); font-size: 13px; letter-spacing: 0.02em; color: var(--parch-muted);
+  }
+  .policy-meta strong { color: var(--parch-ink); font-weight: 600; }
+
+  /* ============ CONTENT ============ */
+  .policy { padding: 64px 0 120px; }
+  .policy__tldr {
+    background: #fffaf0; border: 1px solid var(--parch-line); border-left: 3px solid var(--ember);
+    padding: 26px 28px; margin-bottom: 64px;
+  }
+  .policy__tldr p { font-size: 0.98rem; line-height: 1.75; color: var(--parch-ink); }
+  .policy__tldr p + p { margin-top: 12px; }
+
+  .policy__block { padding: 40px 0; border-top: 1px solid var(--parch-line); }
+  .policy__block:first-of-type { border-top: none; padding-top: 0; }
+  .policy__block h2 { font-size: clamp(1.3rem, 1.1rem + 0.7vw, 1.55rem); }
+  .policy__block .kicker {
+    display: block; font-family: var(--font-mono); font-size: 11.5px; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--parch-muted); margin-bottom: 8px;
+  }
+  .policy__block p { margin-top: 16px; font-size: 1rem; line-height: 1.8; color: #4a3b24; }
+  .policy__block p:first-of-type { margin-top: 16px; }
+  .policy__block ul { margin: 18px 0 0; padding-left: 22px; }
+  .policy__block li { margin-top: 10px; font-size: 1rem; line-height: 1.75; color: #4a3b24; }
+  .policy__block strong { color: var(--parch-ink); }
+  .policy__block a.inline-link { color: var(--ember); text-decoration: underline; text-underline-offset: 2px; }
+
+  .policy__contact {
+    margin-top: 64px; padding: 36px 32px; text-align: center;
+    background: linear-gradient(180deg, rgba(177,73,44,0.06), transparent);
+    border: 1px dashed var(--parch-line);
+  }
+  .policy__contact h2 { font-size: 1.4rem; }
+  .policy__contact p { margin-top: 12px; color: var(--parch-muted); }
+  .policy__contact .btn { margin-top: 22px; }
+
+  /* ============ FOOTER ============ */
+  .footer { background: var(--ink); color: var(--paper); padding: 56px 0 30px; margin-top: 0; }
+  .footer .wrap { max-width: 1180px; }
+  .footer__brand { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+  .footer__brand svg { width: 30px; height: 30px; }
+  .footer__brand span { font-family: var(--font-display); font-weight: 700; font-size: 18px; letter-spacing: 0.03em; }
+  .footer__row {
+    margin-top: 40px; display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 12px; padding-top: 26px; border-top: 1px solid var(--ink-line);
+  }
+  .footer p, .footer a { font-family: var(--font-mono); font-size: 13.5px; letter-spacing: 0.03em; color: #6f6087; text-decoration: none; }
+  .footer__legal { display: flex; align-items: center; gap: 18px; }
+  .footer__legal a:hover { color: var(--gold-bright); }
+
+  @media (max-width: 600px) {
+    .policy-header { padding: 128px 0 48px; }
+    .policy__tldr { padding: 22px; margin-bottom: 48px; }
+    .policy__contact { padding: 30px 22px; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a class="wordmark" href="/">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M12 2c-1.4 2-2 3.4-2 4.6 0 1.2.9 2.1 2 2.1s2-.9 2-2.1C14 5.4 13.4 4 12 2Z" fill="#e2b768"/><path d="M8 22v-8a4 4 0 0 1 8 0v8" stroke="#e2b768" stroke-width="1.5"/><path d="M5 22h14" stroke="#e2b768" stroke-width="1.5" stroke-linecap="round"/></svg>
+      <span>PRIVACY VILLAGE</span>
+    </a>
+    <a class="nav__back" href="/"><svg viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Back to the Village</a>
+  </div>
+</nav>
+
+<header class="policy-header">
+  <div class="wrap">
+    <p class="eyebrow">Village records</p>
+    <h1>What the village keeps in its ledger</h1>
+    <p class="sub">This is the privacy policy for privacyvillage.org — what we notice when you visit, what you tell us yourself, and what we do (and never do) with it. Written the way we'd explain it to a villager at the gate, not buried in a scroll only a scribe could love.</p>
+    <div class="policy-meta">
+      <span>Effective: <strong>August 9, 2026</strong></span>
+      <span>Data controller: <strong>Mert Can Boyar</strong></span>
+      <span>Reach us: <strong>mert@privacyquest.org</strong></span>
+    </div>
+  </div>
+</header>
+
+<main class="policy">
+  <div class="wrap">
+
+    <div class="policy__tldr">
+      <p><strong>The short version:</strong> This site collects almost nothing about you by default. We use privacy-friendly, cookieless analytics to see roughly how many people visit and which pages they read — no profiles, no ad trackers, no selling of anything. If you fill out a form (like a waitlist), we keep only what you typed in, for as long as we need it to do the thing you asked for.</p>
+      <p>The village itself — the actual game at <a class="inline-link" href="https://play.privacyvillage.org/" target="_blank" rel="noopener">play.privacyvillage.org</a> — is a separate service with its own accounts and its own privacy notice. This policy covers the marketing site you're reading right now.</p>
+    </div>
+
+    <div class="policy__block">
+      <span class="kicker">01 · Who keeps this ledger</span>
+      <h2>The data controller</h2>
+      <p>The data controller for privacyvillage.org — the person responsible for deciding what data is collected and why — is <strong>Mert Can Boyar</strong>, founder of Privacy Village. You can reach him directly at <strong>mert@privacyquest.org</strong> for anything in this policy: questions, corrections, or a request to exercise your rights.</p>
+    </div>
+
+    <div class="policy__block">
+      <span class="kicker">02 · What the village notices when you visit</span>
+      <h2>Site analytics</h2>
+      <p>Like any watchtower, we keep a general count of who passes through — but we don't ask your name to do it. This site uses <strong>Vercel Web Analytics</strong>, a cookieless analytics service. It tells us things like which pages are popular, roughly which country a visit came from, and what kind of device was used — aggregated across all visitors, never as a profile tied to you personally.</p>
+      <ul>
+        <li>No cookies are set for analytics purposes.</li>
+        <li>No individual visitor is identified or tracked across sessions.</li>
+        <li>We don't use advertising pixels, retargeting scripts, or third-party trackers.</li>
+      </ul>
+    </div>
+
+    <div class="policy__block">
+      <span class="kicker">03 · What you tell the village yourself</span>
+      <h2>Forms and waitlists</h2>
+      <p>If you ever fill out a form on this site — for example, joining the Privacy Village Teens educator waitlist — we collect exactly what the form asks for and nothing hidden alongside it. For the educator waitlist, that's your name, email address, and school context, as stated on that form. We use it only to run the waitlist, share relevant updates, and follow up about piloting the program — never to build an advertising profile or to sell to anyone.</p>
+      <p>If you email us directly, we keep that correspondence to respond to you and to keep a record of the conversation, the same way any reasonable correspondence is kept.</p>
+    </div>
+
+    <div class="policy__block">
+      <span class="kicker">04 · The traveling players</span>
+      <h2>Third parties we work with</h2>
+      <p>A few outside services help run this site. Each only sees what it strictly needs to do its job:</p>
+      <ul>
+        <li><strong>Vercel</strong> — hosts this site and provides the cookieless analytics described above.</li>
+        <li><strong>YouTube</strong> — our gameplay video is embedded as a click-to-play poster image. Nothing loads from YouTube, and no YouTube cookies are set, until you actively click play. Once you do, YouTube's own privacy policy governs that playback.</li>
+      </ul>
+      <p>We don't share, rent, or sell your information to anyone for their own marketing purposes.</p>
+    </div>
+
+    <div class="policy__block">
+      <span class="kicker">05 · Younger adventurers</span>
+      <h2>Children's privacy</h2>
+      <p>This marketing site is directed at adults — teachers, privacy and security professionals, and organizations — not at children. The Privacy Village Teens waitlist described above is for educators, not students: teachers hold the accounts, students never register, and no student data is collected on this site. If Privacy Village Teens ever collects information from students directly, that will happen inside the classroom product itself, under its own notice built for that purpose — not here.</p>
+    </div>
+
+    <div class="policy__block">
+      <span class="kicker">06 · How long we keep the ledger</span>
+      <h2>Data retention</h2>
+      <p>Aggregated analytics data is retained only as long as it's useful for understanding site traffic and is never tied back to an individual. Waitlist and correspondence information is kept for as long as it's relevant to the purpose you gave it to us for — for example, until the program you joined the waitlist for launches or closes — and deleted or anonymized after that, unless you ask us to remove it sooner.</p>
+    </div>
+
+    <div class="policy__block">
+      <span class="kicker">07 · Your rights as a villager</span>
+      <h2>What you can ask of us</h2>
+      <p>Depending on where you live, privacy law may give you rights over the personal data we hold about you. We honor these regardless of exactly which law applies, because they're just good practice. You can ask us to:</p>
+      <ul>
+        <li>Tell you what personal data we hold about you, and why.</li>
+        <li>Correct anything that's inaccurate or out of date.</li>
+        <li>Delete your personal data, where we're not required to keep it for another lawful reason.</li>
+        <li>Restrict or object to how we use your data.</li>
+        <li>Give you a copy of your data in a portable format.</li>
+        <li>Withdraw any consent you previously gave, at any time.</li>
+      </ul>
+      <p>To exercise any of these, email <strong>mert@privacyquest.org</strong>. If you're not satisfied with our response, you also have the right to lodge a complaint with your local data protection authority.</p>
+    </div>
+
+    <div class="policy__block">
+      <span class="kicker">08 · Keeping the ledger safe</span>
+      <h2>Security</h2>
+      <p>We keep the information we do hold behind reasonable technical and organizational safeguards, and we limit who can access it to what's needed to run the site and respond to you. No method of transmission or storage is perfectly secure, but we treat what little we collect with real care, not just a promise.</p>
+    </div>
+
+    <div class="policy__block">
+      <span class="kicker">09 · When the ledger changes</span>
+      <h2>Updates to this policy</h2>
+      <p>If this policy changes in a meaningful way, we'll update the effective date above and, where the change is significant, make a reasonable effort to flag it on the site. We'd rather you notice a change here than be surprised by one.</p>
+    </div>
+
+    <div class="policy__contact">
+      <h2>Send a raven</h2>
+      <p>Questions, corrections, or a rights request — Mert reads this inbox himself.</p>
+      <a class="btn btn--gold" href="mailto:mert@privacyquest.org">mert@privacyquest.org</a>
+    </div>
+
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__brand">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M12 2c-1.4 2-2 3.4-2 4.6 0 1.2.9 2.1 2 2.1s2-.9 2-2.1C14 5.4 13.4 4 12 2Z" fill="#e2b768"/><path d="M8 22v-8a4 4 0 0 1 8 0v8" stroke="#e2b768" stroke-width="1.5"/><path d="M5 22h14" stroke="#e2b768" stroke-width="1.5" stroke-linecap="round"/></svg>
+      <span>PRIVACY VILLAGE</span>
+    </div>
+    <div class="footer__row">
+      <p>Born on Data Privacy Day. Awake all year.</p>
+      <div class="footer__legal">
+        <a href="/privacy.html">Privacy Policy</a>
+        <span>&copy; Privacy Village</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
