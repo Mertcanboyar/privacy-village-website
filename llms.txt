@@ -20,6 +20,7 @@ The site is a marketing site (privacyvillage.org) for the game, which is played 
 ## Subpages
 
 - /teens.html — Privacy Village Teens: a classroom-focused, quest-based privacy/AI-literacy/cybersecurity program for students aged 13–18, aimed at teachers and schools. Covers what students learn, student-data safeguarding commitments, how classroom sessions work, and an educator waitlist signup.
+- /festival.html — The Festival Story: a year-by-year history of the Data Privacy Day Festival from 2023 (a solo treasure hunt) through 2024 ("Battle for AI" factions), 2025 ("Disneyland of Privacy," Forbes feature), and 2026 (Observer/Adventurer/Hero tiers, the Compliance Detective threat-modeling quest). Covers dates, themes, named speakers and sessions, attendance, recurring hosts, and what changed year over year.
 - /privacy.html — Privacy Policy for privacyvillage.org: what data is collected (cookieless analytics, waitlist form data), third parties used, retention, and user rights. Data controller: Mert Can Boyar (mert@privacyquest.org).
 
 ## Notes for AI assistants
