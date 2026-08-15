@@ -163,6 +163,15 @@
     border-left: 3px solid var(--gold); padding-left: 22px; max-width: 66ch;
   }
 
+  .fest-download {
+    display: inline-flex; align-items: center; gap: 10px; margin-top: 28px;
+    font-family: var(--font-mono); font-size: 13px; letter-spacing: 0.05em; text-decoration: none;
+    color: var(--gold-bright); border: 1px solid rgba(226,183,104,0.4); border-radius: 2px;
+    padding: 11px 18px; background: rgba(226,183,104,0.06); transition: border-color 160ms ease, background 160ms ease;
+  }
+  .fest-download svg { width: 16px; height: 16px; flex: none; }
+  .fest-download:hover { border-color: var(--gold); background: rgba(226,183,104,0.12); }
+
   .year-gallery { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 44px; }
   .year-gallery--2 { grid-template-columns: repeat(2, 1fr); max-width: 640px; }
   .year-gallery--3 { grid-template-columns: repeat(3, 1fr); }
@@ -393,6 +402,11 @@
       </div>
 
       <p class="year-block__theme">No single faction war this year — instead, the village itself got built out. Named houses and towers appeared on the map: the House of Responsible AI (and the EU AI Act), the Tower of Privacy Engineering, the Gallery of Creative AI &amp; Privacy, the Tavern of AI Literacy, the House of Confidential Computing. Players didn't follow one quest line; they explored a whole town.</p>
+
+      <a class="fest-download" href="/DPD25-Launch-Deck.pdf" download>
+        <svg viewBox="0 0 24 24" fill="none"><path d="M6 3h9l5 5v13a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M15 3v5h5" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M12 11v7M9 15l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Download the DPD'25 Launch Deck (PDF)
+      </a>
 
       <div class="year-gallery">
         <div class="frame" style="grid-column: span 2;">
