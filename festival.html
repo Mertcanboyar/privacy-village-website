@@ -60,8 +60,8 @@
   }
   body {
     margin: 0;
-    background: var(--parch);
-    color: var(--parch-ink);
+    background: var(--ink);
+    color: var(--paper);
     font-family: var(--font-body);
     font-size: 19px;
     line-height: 1.7;
@@ -77,8 +77,9 @@
   .eyebrow {
     font-family: var(--font-mono); font-size: 13.5px; font-weight: 500;
     letter-spacing: 0.16em; text-transform: uppercase;
-    display: inline-flex; align-items: center; gap: 10px; color: var(--ember);
+    display: inline-flex; align-items: center; gap: 10px; color: var(--gold-bright);
   }
+  .eyebrow--ember { color: var(--ember-soft); }
   .eyebrow::before { content: ""; width: 22px; height: 1px; background: currentColor; opacity: 0.6; }
 
   .btn {
@@ -93,9 +94,9 @@
     color: var(--gold-ink);
     box-shadow: 0 1px 0 rgba(255,255,255,0.35) inset, 0 10px 24px -10px rgba(201,154,68,0.55);
   }
-  .btn--gold:hover { transform: translateY(-2px); }
-  .btn--ghost-parch { border-color: var(--parch-line); color: var(--parch-ink); background: rgba(0,0,0,0.02); }
-  .btn--ghost-parch:hover { border-color: var(--ember); color: var(--ember); }
+  .btn--gold:hover { transform: translateY(-2px); box-shadow: 0 1px 0 rgba(255,255,255,0.4) inset, 0 14px 28px -10px rgba(201,154,68,0.7); }
+  .btn--ghost-ink { border-color: rgba(226,183,104,0.5); color: var(--paper); background: rgba(0,0,0,0.15); backdrop-filter: blur(2px); }
+  .btn--ghost-ink:hover { border-color: var(--gold); color: var(--gold-bright); }
 
   /* ============ NAV ============ */
   .nav {
@@ -117,34 +118,49 @@
   .nav__back svg { width: 12px; height: 12px; }
 
   /* ============ HEADER ============ */
-  .fest-header { padding: 168px 0 56px; text-align: center; }
+  .fest-header { position: relative; padding: 168px 0 64px; text-align: center; overflow: clip; }
+  .fest-header::before {
+    content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+    background:
+      radial-gradient(50% 60% at 24% 20%, rgba(177,73,44,0.24), transparent 70%),
+      radial-gradient(50% 60% at 76% 30%, rgba(201,154,68,0.22), transparent 70%);
+  }
+  .fest-header .wrap { position: relative; z-index: 1; }
   .fest-header .eyebrow { justify-content: center; }
-  .fest-header h1 { font-size: clamp(2.1rem, 1.5rem + 2.6vw, 3.3rem); margin-top: 18px; line-height: 1.15; max-width: 780px; margin-left: auto; margin-right: auto; }
-  .fest-header .sub { margin: 22px auto 0; max-width: 62ch; font-size: 1.08rem; color: var(--parch-muted); }
+  .fest-header h1 { font-size: clamp(2.1rem, 1.5rem + 2.6vw, 3.3rem); margin-top: 18px; line-height: 1.15; max-width: 780px; margin-left: auto; margin-right: auto; color: var(--paper); text-shadow: 0 4px 30px rgba(0,0,0,0.5); }
+  .fest-header .sub { margin: 22px auto 0; max-width: 62ch; font-size: 1.08rem; color: var(--paper-muted); }
 
   .fest-jump { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-top: 36px; }
   .fest-jump a {
     font-family: var(--font-mono); font-size: 12.5px; letter-spacing: 0.08em; text-transform: uppercase;
-    color: var(--parch-ink); text-decoration: none; border: 1px solid var(--parch-line);
-    padding: 9px 16px; border-radius: 2px; transition: border-color 160ms ease, color 160ms ease;
+    color: var(--paper-muted); text-decoration: none; border: 1px solid var(--ink-line);
+    padding: 9px 16px; border-radius: 2px; transition: border-color 160ms ease, color 160ms ease; background: rgba(0,0,0,0.15);
   }
-  .fest-jump a:hover { border-color: var(--ember); color: var(--ember); }
+  .fest-jump a:hover { border-color: var(--gold); color: var(--gold-bright); }
 
   /* ============ TIMELINE ============ */
-  .fest-main { padding: 32px 0 100px; }
-  .year-block { position: relative; padding-top: 96px; border-top: 1px solid var(--parch-line); margin-top: 96px; }
+  .fest-main { padding: 32px 0 100px; position: relative; }
+  .year-block { position: relative; padding: 96px 0 0; border-top: 1px solid var(--ink-line); margin-top: 96px; overflow: clip; }
   .year-block:first-child { padding-top: 0; border-top: none; margin-top: 64px; }
+  .year-block::before {
+    content: ""; position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+    width: 900px; height: 500px; z-index: 0; pointer-events: none; border-radius: 50%;
+    filter: blur(10px); opacity: 0.55;
+  }
+  .year-block:nth-child(odd)::before { background: radial-gradient(closest-side, rgba(177,73,44,0.16), transparent 75%); }
+  .year-block:nth-child(even)::before { background: radial-gradient(closest-side, rgba(201,154,68,0.16), transparent 75%); }
+  .year-block > * { position: relative; z-index: 1; }
 
   .year-block__head { display: flex; align-items: flex-end; gap: 22px; flex-wrap: wrap; }
-  .year-block__num { font-family: var(--font-display); font-weight: 700; font-size: clamp(3rem, 2.2rem + 3vw, 4.6rem); color: var(--ember); line-height: 0.9; }
+  .year-block__num { font-family: var(--font-display); font-weight: 700; font-size: clamp(3rem, 2.2rem + 3vw, 4.6rem); color: var(--ember-soft); line-height: 0.9; text-shadow: 0 0 40px rgba(217,122,79,0.35); }
   .year-block__title { flex: 1; min-width: 220px; }
   .year-block__title .eyebrow { margin-bottom: 4px; }
-  .year-block__title h2 { font-size: clamp(1.5rem, 1.25rem + 1.1vw, 2.1rem); }
-  .year-block__dates { margin-top: 8px; font-family: var(--font-mono); font-size: 13px; letter-spacing: 0.03em; color: var(--parch-muted); }
+  .year-block__title h2 { font-size: clamp(1.5rem, 1.25rem + 1.1vw, 2.1rem); color: var(--paper); }
+  .year-block__dates { margin-top: 8px; font-family: var(--font-mono); font-size: 13px; letter-spacing: 0.03em; color: var(--paper-muted); }
 
   .year-block__theme {
-    margin-top: 32px; font-size: 1.1rem; font-style: italic; line-height: 1.7;
-    border-left: 3px solid var(--ember); padding-left: 22px; max-width: 66ch;
+    margin-top: 32px; font-size: 1.1rem; font-style: italic; line-height: 1.7; color: var(--paper);
+    border-left: 3px solid var(--gold); padding-left: 22px; max-width: 66ch;
   }
 
   .year-gallery { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 44px; }
@@ -153,47 +169,52 @@
 
   .frame { position: relative; padding: 8px; border: 1px solid var(--gold); background: linear-gradient(160deg, rgba(226,183,104,0.14), rgba(226,183,104,0.02)); }
   .frame::before { content: ""; position: absolute; inset: 4px; border: 1px solid rgba(226,183,104,0.4); pointer-events: none; }
-  .frame__corner { position: absolute; width: 8px; height: 8px; background: var(--gold-bright); transform: rotate(45deg); box-shadow: 0 0 0 3px var(--parch); z-index: 2; }
+  .frame__corner { position: absolute; width: 8px; height: 8px; background: var(--gold-bright); transform: rotate(45deg); box-shadow: 0 0 0 3px var(--ink); z-index: 2; }
   .frame__corner--tl { top: -4px; left: -4px; } .frame__corner--tr { top: -4px; right: -4px; }
   .frame__corner--bl { bottom: -4px; left: -4px; } .frame__corner--br { bottom: -4px; right: -4px; }
   .frame__media { position: relative; overflow: hidden; background: var(--ink-raised); aspect-ratio: 4 / 3; }
   .frame__media img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 600ms ease; }
   .frame:hover .frame__media img { transform: scale(1.05); }
   .frame__caption { margin-top: 14px; text-align: center; }
-  .frame__caption .cap-title { font-family: var(--font-display); font-weight: 700; font-size: 0.92rem; }
-  .frame__caption .cap-sub { margin-top: 4px; font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--parch-muted); }
+  .frame__caption .cap-title { font-family: var(--font-display); font-weight: 700; font-size: 0.92rem; color: var(--paper); }
+  .frame__caption .cap-sub { margin-top: 4px; font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--paper-muted); }
 
   .year-block__prose { margin-top: 44px; max-width: 72ch; }
   .year-block__prose .kicker {
     display: block; font-family: var(--font-mono); font-size: 11.5px; letter-spacing: 0.1em;
-    text-transform: uppercase; color: var(--ember); margin: 32px 0 10px;
+    text-transform: uppercase; color: var(--gold-bright); margin: 32px 0 10px;
   }
   .year-block__prose .kicker:first-child { margin-top: 0; }
-  .year-block__prose p { font-size: 1rem; line-height: 1.85; color: #4a3b24; }
+  .year-block__prose p { font-size: 1rem; line-height: 1.85; color: #d8cee9; }
   .year-block__prose p + p { margin-top: 14px; }
-  .year-block__prose strong { color: var(--parch-ink); }
+  .year-block__prose strong { color: var(--paper); }
 
   .faction-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px; max-width: 720px; }
   .faction-pair figure { margin: 0; }
-  .faction-pair img { border-radius: 3px; border: 1px solid var(--parch-line); }
-  .faction-pair figcaption { margin-top: 8px; text-align: center; font-family: var(--font-mono); font-size: 11.5px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--parch-muted); }
+  .faction-pair img { border-radius: 3px; border: 1px solid var(--ink-line); }
+  .faction-pair figcaption { margin-top: 8px; text-align: center; font-family: var(--font-mono); font-size: 11.5px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--paper-muted); }
 
   /* ============ REGULARS ============ */
-  .regulars { margin-top: 100px; padding-top: 80px; border-top: 1px solid var(--parch-line); }
+  .regulars { margin-top: 100px; padding-top: 80px; border-top: 1px solid var(--ink-line); }
   .regulars .section__head { max-width: 640px; margin: 0 auto; text-align: center; }
   .regulars .section__head .eyebrow { justify-content: center; }
-  .regulars .section__head h2 { margin-top: 14px; font-size: clamp(1.6rem, 1.3rem + 1.2vw, 2.2rem); }
-  .regulars .section__head p { margin-top: 16px; color: var(--parch-muted); font-size: 1.02rem; line-height: 1.7; }
+  .regulars .section__head h2 { margin-top: 14px; font-size: clamp(1.6rem, 1.3rem + 1.2vw, 2.2rem); color: var(--paper); }
+  .regulars .section__head p { margin-top: 16px; color: var(--paper-muted); font-size: 1.02rem; line-height: 1.7; }
   .regulars-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 48px; }
-  .regular-card { border: 1px solid var(--parch-line); border-radius: 3px; padding: 22px 24px; background: rgba(255,255,255,0.35); }
-  .regular-card h3 { font-size: 1.05rem; }
-  .regular-card .tag { display: block; margin-top: 4px; font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ember); }
-  .regular-card p { margin-top: 10px; font-size: 0.93rem; line-height: 1.65; color: var(--parch-muted); }
+  .regular-card {
+    border: 1px solid rgba(226,183,104,0.25); border-radius: 3px; padding: 22px 24px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.035), rgba(255,255,255,0.01));
+    transition: border-color 200ms ease;
+  }
+  .regular-card:hover { border-color: rgba(226,183,104,0.5); }
+  .regular-card h3 { font-size: 1.05rem; color: var(--paper); }
+  .regular-card .tag { display: block; margin-top: 4px; font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold-bright); }
+  .regular-card p { margin-top: 10px; font-size: 0.93rem; line-height: 1.65; color: var(--paper-muted); }
 
   /* ============ CLOSING CTA ============ */
   .fest-cta { margin-top: 100px; text-align: center; max-width: 620px; margin-left: auto; margin-right: auto; }
-  .fest-cta h2 { font-size: clamp(1.5rem, 1.2rem + 1.2vw, 2.1rem); }
-  .fest-cta p { margin-top: 16px; font-size: 1.02rem; line-height: 1.7; color: var(--parch-muted); }
+  .fest-cta h2 { font-size: clamp(1.5rem, 1.2rem + 1.2vw, 2.1rem); color: var(--paper); }
+  .fest-cta p { margin-top: 16px; font-size: 1.02rem; line-height: 1.7; color: var(--paper-muted); }
   .fest-cta .btns { margin-top: 26px; display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
 
   /* ============ FOOTER ============ */
@@ -561,7 +582,7 @@
     <p>Every festival starts the same way it did in 2023 — with a few players willing to try the first puzzle. Come find out what this year's faction is.</p>
     <div class="btns">
       <a class="btn btn--gold" href="https://play.privacyvillage.org/">Enter the Village</a>
-      <a class="btn btn--ghost-parch" href="/#festival">Back to the Festival Overview</a>
+      <a class="btn btn--ghost-ink" href="/#festival">Back to the Festival Overview</a>
     </div>
   </div>
 </div>
